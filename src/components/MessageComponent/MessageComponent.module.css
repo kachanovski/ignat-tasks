@@ -1,0 +1,45 @@
+.messageComponent {
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 50px 200px;
+}
+
+.messageBox {
+    background-color: lightslategrey;
+    border: 2px solid black;
+    height: 70px;
+    width: 250px;
+    border-radius: 10px;
+}
+
+.photo {
+    display: flex;
+    background-color: darkorange;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    align-self: end;
+    align-items: center;
+}
+
+.name {
+    font-size: 13px;
+    color: yellowgreen;
+    solid-color: deeppink;
+    text-align: left;
+    padding-left: 5px;
+    font-style: italic;
+}
+
+.textMessage {
+    text-align: left;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 20px;
+}
+
+.timeStyle {
+    text-align: right;
+    font-size: 14px;
+color: rgba(0,0,0,0.55);
+}
