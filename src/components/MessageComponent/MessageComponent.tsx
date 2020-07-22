@@ -2,14 +2,14 @@ import React from 'react';
 import '../../App.css';
 import style from  './MessageComponent.module.css'
 
-type MessageType = {
+type MessagePropsType = {
     name: string
     text: string
     time: string
 }
 
 
-function MessageComponent(props: MessageType) {
+function MessageComponent(props: MessagePropsType) {
 
     return (
         <div className={style.messageComponent}>
