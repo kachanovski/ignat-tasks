@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import './App.css';
 import MessageComponent from "./components/MessageComponent/MessageComponent";
 import TasksComponent from "./components/TasksComponent/TasksComponent";
+import InputComponent from "./components/InputComponent/InputComponent";
 
 
 export type FilterValueType = "all" | "higth" | "low" | "middle"
@@ -9,7 +10,7 @@ export type FilterValueType = "all" | "higth" | "low" | "middle"
 export type TasksType = {
     id: number
     title: string
-    priority: string
+    priority: FilterValueType
 }
 
 let state = {
@@ -22,10 +23,10 @@ function App() {
 
     let [tasks, setTasks] = useState<Array<TasksType>>([
         {id: 1, title: 'eat', priority: 'low'},
-        {id: 2, title: 'eat', priority: 'midle'},
+        {id: 2, title: 'eat', priority: 'middle'},
         {id: 3, title: 'eat', priority: 'higth'},
         {id: 4, title: 'eat', priority: 'low'},
-        {id: 5, title: 'eat', priority: 'midle'},
+        {id: 5, title: 'eat', priority: 'middle'},
     ])
 
     function removeTask(id: number) {
@@ -44,7 +45,7 @@ function App() {
             tasksFiltered = tasks.filter(t => t.priority === "higth");
             break
         case "middle":
-            tasksFiltered = tasks.filter(t => t.priority === "midle");
+            tasksFiltered = tasks.filter(t => t.priority === "middle");
             break
         case "low":
             tasksFiltered = tasks.filter(t => t.priority === "low");
@@ -63,6 +64,7 @@ function App() {
             <TasksComponent tasks={tasksFiltered}
                             changeFilter={changeFilter}
                             removeTask={removeTask}/>
+            <InputComponent/>
         </div>
     );
 }
