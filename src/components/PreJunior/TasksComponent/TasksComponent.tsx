@@ -1,7 +1,6 @@
 import React from 'react';
-import {FilterValueType, TasksType} from "../../App";
-import style from './TasksComponent.module.css'
-
+import {FilterValueType, TasksType} from "../../../App";
+import Button from "../../../common/Button";
 
 type TasksPropsType = {
     tasks: Array<TasksType>
@@ -23,6 +22,11 @@ function TasksComponent(props: TasksPropsType) {
                 <h3>TasksList</h3>
             </div>
 
+            <Button value="all" onClick={onClickAllHandler}/>
+            <Button value="higth" onClick={onClickHigthHandler}/>
+            <Button value="middle" onClick={onClickMiddleHandler}/>
+            <Button value="low" onClick={onClickLowHandler}/>
+
             <div>
                 {props.tasks.map(t => {
                     const removeTask = () => {
@@ -31,16 +35,12 @@ function TasksComponent(props: TasksPropsType) {
 
                     return (
                         <li key={t.id}><span>{t.title}</span> <span> - {t.priority}</span>
-                            <button onClick={removeTask}>X</button>
+                            <Button value='X' onClick={removeTask}/>
                         </li>
                     )
                 })}
             </div>
 
-            <button value="all" onClick={onClickAllHandler}>All</button>
-            <button value="higth" onClick={onClickHigthHandler}>Hight</button>
-            <button value="middle" onClick={onClickMiddleHandler}>Middle</button>
-            <button value="low" onClick={onClickLowHandler}>Low</button>
 
         </div>
 

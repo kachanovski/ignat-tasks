@@ -1,0 +1,21 @@
+.button {
+    background-color: #800080;
+    color: white;
+    padding: 8px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10%;
+    margin: 3px;
+}
+
+.button:hover {
+    background-color: #6A5ACD;
+}
+
+.deleteButton {
+    color: white;
+    margin: 3px;
+    background-color: grey;
+    width: 25px;
+    height: 25px;
+}

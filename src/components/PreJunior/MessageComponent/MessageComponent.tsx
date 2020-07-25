@@ -1,6 +1,6 @@
 import React from 'react';
-import '../../App.css';
-import style from  './MessageComponent.module.css'
+import '../../../App.css';
+import style from './MessageComponent.module.css'
 
 type MessagePropsType = {
     name: string

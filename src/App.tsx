@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
 import './App.css';
-import MessageComponent from "./components/MessageComponent/MessageComponent";
-import TasksComponent from "./components/TasksComponent/TasksComponent";
-import InputComponent from "./components/InputComponent/InputComponent";
-
+import Navbar from './components/NavBar/NavBar';
+import PreJunior from "./components/PreJunior/PreJunior";
+import Junior from './components/Junior/Junior';
+import JuniorPlus from "./components/Junior+/Junior+";
+import {HashRouter, Route} from 'react-router-dom'
 
 export type FilterValueType = "all" | "higth" | "low" | "middle"
 
@@ -53,19 +54,34 @@ function App() {
 
     }
 
-
     function changeFilter(priority: FilterValueType) {
         setFilter(priority)
     }
 
     return (
-        <div className="App">
-            <MessageComponent name={state.name} time={state.time} text={state.text}/>
-            <TasksComponent tasks={tasksFiltered}
-                            changeFilter={changeFilter}
-                            removeTask={removeTask}/>
-            <InputComponent/>
-        </div>
+        <HashRouter>
+            <div className="App">
+                <div>
+                    <Navbar/>
+                </div>
+                <div>
+                    <Route exact path='/prejunior' render={() =>
+                        <PreJunior name={state.name}
+                                   text={state.text}
+                                   time={state.time}
+                                   tasks={tasksFiltered}
+                                   changeFilter={changeFilter}
+                                   removeTask={removeTask}/>
+                    }/>
+
+                    <Route exact path='/junior' render={() =>
+                        <Junior/>}/>
+
+                    <Route exact path='/junior+' render={() =>
+                        <JuniorPlus/>}/>
+                </div>
+            </div>
+        </HashRouter>
     );
 }
 

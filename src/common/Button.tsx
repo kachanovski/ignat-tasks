@@ -1,52 +1,22 @@
-import React, {ChangeEvent, KeyboardEvent, useState} from 'react';
-import '../../App.css';
-import style from './InputComponent.module.css'
+import React from 'react';
+import './Button.css'
 
+type PropsButton = {
+    value: string
+    onClick: () => void
+}
 
-function InputComponent() {
+function Button(props: PropsButton) {
 
-    let [title, setTitle] = useState("")
-    let [count, setCount] = useState(0)
-    let [titleIsNull, setTitleIsNull] = useState<string | null>(null)
-
-    const onChangeValue = (e: ChangeEvent<HTMLInputElement>) => {
-        setTitleIsNull(null)
-        setTitle(e.currentTarget.value)
-    }
-
-    const onPressEnter = (e: KeyboardEvent<HTMLInputElement>) => {
-        setTitleIsNull(null)
-        if (e.key === "Enter") {
-            alertTitle()
-        }
-    }
-
-    const alertTitle = () => {
-        if (title.trim() !== "") {
-            alert("Hello" + " " + title)
-            setTitle('')
-            setCount(count + 1)
-
-        } else {
-            setTitleIsNull("Введите значение")
-        }
-
-    }
+    let classFor = props.value === 'X' ? "deleteButton" : "button"
 
     return (
-        <div>
-            <input placeholder='Введите значение'
-                   className={titleIsNull ? style.error : ''}
-                   onKeyPress={onPressEnter}
-                   value={title}
-                   onChange={onChangeValue}/>
-            {titleIsNull && <div className={style.errorMessage}>{titleIsNull}</div>}
-            <button onClick={alertTitle}>ADD</button>
-            <div>
-                <span>{count}</span>
-            </div>
-        </div>
+
+            <button onClick={props.onClick}
+                className={classFor}>{props.value}
+            </button>
+
     );
 }
 
-export default InputComponent;
+export default Button;
