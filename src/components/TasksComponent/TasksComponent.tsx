@@ -1,5 +1,4 @@
 import React from 'react';
-import '../../App.css';
 import {FilterValueType, TasksType} from "../../App";
 import style from './TasksComponent.module.css'
 
