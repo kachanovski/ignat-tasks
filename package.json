@@ -1,6 +1,6 @@
 {
   "name": "ignat-tasks",
-  "homepage": "https://kachanovski.github.io/ignat-tasks/",
+  "homepage": "http://kachanovski.github.io/ignat-tasks/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

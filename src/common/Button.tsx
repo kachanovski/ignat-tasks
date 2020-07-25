@@ -1,4 +1,4 @@
-import React, {ChangeEvent,KeyboardEvent, useState} from 'react';
+import React, {ChangeEvent, KeyboardEvent, useState} from 'react';
 import '../../App.css';
 import style from './InputComponent.module.css'
 
@@ -36,15 +36,15 @@ function InputComponent() {
     return (
         <div>
             <input placeholder='Введите значение'
-    className={titleIsNull ? style.error : ''}
-    onKeyPress={onPressEnter}
-    value={title}
-    onChange={onChangeValue}/>
-    {titleIsNull && <div className={style.errorMessage}>{titleIsNull}</div>}
-        <button onClick={alertTitle}>ADD</button>
-        <div>
-        <span>{count}</span>
-        </div>
+                   className={titleIsNull ? style.error : ''}
+                   onKeyPress={onPressEnter}
+                   value={title}
+                   onChange={onChangeValue}/>
+            {titleIsNull && <div className={style.errorMessage}>{titleIsNull}</div>}
+            <button onClick={alertTitle}>ADD</button>
+            <div>
+                <span>{count}</span>
+            </div>
         </div>
     );
 }

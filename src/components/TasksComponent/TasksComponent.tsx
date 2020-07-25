@@ -17,20 +17,10 @@ function TasksComponent(props: TasksPropsType) {
     const onClickMiddleHandler = () => props.changeFilter("middle")
     const onClickLowHandler = () => props.changeFilter("low")
 
-/*
-  let changeFilter =(e:ChangeEvent<HTMLSelectElement>) => {
-        alert() }
-*/
     return (
         <div>
             <div>
                 <h3>TasksList</h3>
-              {/*  <select value="low" onChange={changeFilter}>
-                    <option value="all" >All</option>
-                    <option value="higth" >Hight</option>
-                    <option value="middle" >Middle</option>
-                    <option value="low">Low</option>
-                </select>*/}
             </div>
 
             <div>
