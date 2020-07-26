@@ -1,6 +1,6 @@
 import React from 'react';
 import {FilterValueType, TasksType} from "../../../App";
-import Button from "../../../common/Button";
+import Button from "../../../common/Button/Button";
 
 type TasksPropsType = {
     tasks: Array<TasksType>

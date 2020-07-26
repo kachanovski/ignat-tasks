@@ -1,10 +1,11 @@
 import React from 'react';
+import Task from './FirstTask/FirstTask';
 
 function Junior() {
 
     return (
         <div >
-         JUNIOR
+              <Task />
         </div>
     );
 }

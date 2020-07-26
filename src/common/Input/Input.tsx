@@ -1,15 +1,11 @@
 import React, {ChangeEvent, KeyboardEvent, useState} from 'react';
 import style from './Input.module.css'
-import Button from "./Button";
-
-type PropsInput = {
-    onPressEnter: (value: string) => void
-}
-
-function Input(props: PropsInput) {
 
 
-    let [value, setValue] = useState("")
+function Input(props: any) {
+
+
+    let [value, setValue] = useState("11")
     let [error, setError] = useState<string | null>(null)
 
     const onChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -17,7 +13,7 @@ function Input(props: PropsInput) {
         setValue(e.currentTarget.value)
     }
 
-    const onPressEnter = (e: KeyboardEvent<HTMLInputElement>) => {
+    const onKeyPress = (e: KeyboardEvent<HTMLInputElement>) => {
         if (e.key === "Enter") {
             addItem()
         }
@@ -32,15 +28,16 @@ function Input(props: PropsInput) {
         }
     }
 
-
+debugger
     return (
         <div>
             <input value={value}
                    onChange={onChange}
+                   autoFocus={true}
                    className={style.input}
-                   onKeyPress={onPressEnter}
+                   onBlur={props.onBlur}
+                   onKeyPress={onKeyPress}
                    type='text'/>
-            <Button value="ADD" onClick={addItem}/>
             {error && <div className={style.errorMessage}>{error}</div>}
 
         </div>

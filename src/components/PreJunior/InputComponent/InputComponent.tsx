@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
-import Input from "../../../common/Input";
+import Input from "../../../common/Input/Input";
 import style from './InputComponent.module.css'
+import Button from "../../../common/Button/Button";
 
 
 function InputComponent() {
@@ -12,9 +13,11 @@ function InputComponent() {
         setCount(count + 1)
     }
 
+
     return (
         <div className={style.inputComponent}>
             <Input onPressEnter={addItem}/>
+            <Button value="ADD" onClick={addItem}/>
             <div>
                 <span>{count}</span>
             </div>

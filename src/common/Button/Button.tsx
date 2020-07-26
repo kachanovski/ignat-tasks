@@ -1,12 +1,8 @@
 import React from 'react';
 import './Button.css'
 
-type PropsButton = {
-    value: string
-    onClick: () => void
-}
 
-function Button(props: PropsButton) {
+function Button(props: any) {
 
     let classFor = props.value === 'X' ? "deleteButton" : "button"
 

@@ -4,7 +4,9 @@ import {FilterValueType, TasksType} from "../../App";
 import MessageComponent from "./MessageComponent/MessageComponent";
 import TasksComponent from "./TasksComponent/TasksComponent";
 import InputComponent from "./InputComponent/InputComponent";
-import Checkbox from "../../common/Checkbox";
+import Checkbox from "../../common/Checkbox/Checkbox";
+import Button from "../../common/Button/Button";
+import Input from "../../common/Input/Input";
 
 
 type PropsPreJunior = {
@@ -38,6 +40,8 @@ function PreJunior(props: PropsPreJunior) {
             <div className={style.colulmEven}>
                 4
                 <Checkbox/>
+                <Button value="ANY" />
+                <Input />
             </div>
         </div>
     );
