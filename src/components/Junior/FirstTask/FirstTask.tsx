@@ -9,11 +9,11 @@ type StateType = {
 
 function Task() {
 
-let [value, setValue] = useState('1')
-    let [state,setState] = useState<Array<StateType>>([])
+    let [value, setValue] = useState('1')
+    let [state, setState] = useState<Array<StateType>>([])
 
-    const onChangeValue = (e:ChangeEvent<HTMLInputElement>) =>{
-    setValue(e.currentTarget.value)
+    const onChangeValue = (e: ChangeEvent<HTMLInputElement>) => {
+        setValue(e.currentTarget.value)
     }
 
 
@@ -32,7 +32,7 @@ let [value, setValue] = useState('1')
 
     // сохраняем объект типа StateType в ячейке "test"
     saveState<StateType>("test", {x: value, y: 1});
-debugger
+    debugger
     // получем в переменную state объект из ячейки "test" или дэфолтный объект если ячейка пуста
     const stateTask: StateType = restoreState<StateType>("test", {x: "", y: 0});
 

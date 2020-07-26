@@ -35,7 +35,7 @@ function PreJunior(props: PropsPreJunior) {
             </div>
             <div className={style.colulm}>
                 3
-                <InputComponent/>
+                <InputComponent />
             </div>
             <div className={style.colulmEven}>
                 4
