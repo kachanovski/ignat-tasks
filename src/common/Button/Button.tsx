@@ -8,9 +8,9 @@ function Button(props: any) {
 
     return (
 
-            <button onClick={props.onClick}
+        <button onClick={props.onClick}
                 className={classFor}>{props.value}
-            </button>
+        </button>
 
     );
 }

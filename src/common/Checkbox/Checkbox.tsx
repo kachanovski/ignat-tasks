@@ -6,7 +6,7 @@ function Checkbox() {
 
     return (
         <div>
-            <input className={style.checkbox} type='checkbox'/>123
+            <input className={style.checkbox} type='checkbox'/>
         </div>
     );
 }

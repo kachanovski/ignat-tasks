@@ -1,5 +1,5 @@
 .button {
-    background-color: #800080;
+    background-color: #587e76;
     color: white;
     padding: 8px;
     font-size: 18px;
@@ -15,7 +15,7 @@
 .deleteButton {
     color: white;
     margin: 3px;
-    background-color: grey;
+    background-color: #622569;
     width: 25px;
     height: 25px;
 }

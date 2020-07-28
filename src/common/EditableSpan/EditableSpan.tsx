@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import Input from "../Input/Input";
 
 function EditableSpan(props:any) {
 
@@ -15,8 +16,8 @@ function EditableSpan(props:any) {
         <div>
 
             {editMode
-                ? <span onClick={activateEditMode}>{props.value}</span>
-                : <input onChange={props.onChange} value={props.value} onBlur={deactivateEditMode} />}
+                ? <span className="span" onClick={activateEditMode}>{props.value}</span>
+                : <Input onChange={props.onChange} value={props.value} onBlur={deactivateEditMode} />}
 
 
 

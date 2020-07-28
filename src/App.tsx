@@ -20,6 +20,19 @@ let state = {
     time: "20:00"
 }
 
+//сохранить в LocalStorage
+export function saveState<T>(key: string, state: T) {
+    const stateAsString = JSON.stringify(state);
+    localStorage.setItem(key, stateAsString)
+}
+
+//получение сохраненного из LocalStorage
+export function restoreState<T>(key: string, defaultState: T) {
+    const stateAsString = localStorage.getItem(key);
+    if (stateAsString !== null) defaultState = JSON.parse(stateAsString) as T;
+    return defaultState;
+}
+
 function App() {
 
     let [tasks, setTasks] = useState<Array<TasksType>>([
@@ -57,7 +70,6 @@ function App() {
     function changeFilter(priority: FilterValueType) {
         setFilter(priority)
     }
-
 
 
     return (
