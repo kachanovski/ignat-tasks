@@ -81,7 +81,6 @@ function App() {
                 <div>
                     <Route exact path='/prejunior' render={() =>
                         <PreJunior name={state.name}
-
                                    text={state.text}
                                    time={state.time}
                                    tasks={tasksFiltered}

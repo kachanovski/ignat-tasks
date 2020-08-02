@@ -25,22 +25,26 @@ function PreJunior(props: PropsPreJunior) {
 
             <div className={style.column}>
                 <MessageComponent name={props.name} time={props.time} text={props.text}/>
+
             </div>
             <div className={style.columnEven}>
 
                 <TasksComponent tasks={props.tasks}
                                 changeFilter={props.changeFilter}
                                 removeTask={props.removeTask}/>
+
             </div>
             <div className={style.column}>
 
                 <InputComponent/>
+
             </div>
             <div className={style.columnEven}>
 
                 <Checkbox/>
                 <Button value="ANY"/>
                 <Input/>
+
             </div>
         </div>
     );

@@ -1,10 +1,10 @@
 import React from 'react';
-import './Button.css'
+import style from './Button.module.css'
 
 
 function Button(props: any) {
 
-    let classFor = props.value === 'X' ? "deleteButton" : "button"
+    let classFor = props.value === 'X' ? `${style.deleteButton}` : `${style.button}`
 
     return (
 

@@ -24,24 +24,6 @@ function LocalStorageTask() {
         setValue(state.value)
     }
 
-    /*
-        function setValueLS() {
-            let str = value
-            localStorage.setItem("test", JSON.stringify(str))
-            setValue("1")
-        }
-
-        function getValue() {
-            let oldStr = localStorage.getItem("test")
-            alert(oldStr)
-            if (oldStr === null) {
-                setValue("")
-            } else {
-                setValue(oldStr)
-            }
-        }
-    */
-
     return (
         <div>
             <EditableSpan value={value} onChange={onChangeValue}/>

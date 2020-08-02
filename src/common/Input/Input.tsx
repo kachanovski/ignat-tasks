@@ -1,12 +1,21 @@
-import React, {KeyboardEvent} from 'react';
+import React, {ChangeEvent, KeyboardEvent} from 'react';
 import style from './Input.module.css'
 
+type PropsInput = {
+    addItem?: () => void
+    onChange?: (e: ChangeEvent<HTMLInputElement>) => void
+    value?: string
+    onBlur?: () => void
+    error?: string | null
+}
 
-function Input(props: any) {
+function Input(props: PropsInput) {
 
     const onKeyPress = (e: KeyboardEvent<HTMLInputElement>) => {
-        if (e.key === "Enter") {
-            props.addItem()
+        if (props.addItem) {
+            if (e.key === "Enter") {
+                props.addItem()
+            }
         }
     }
 
