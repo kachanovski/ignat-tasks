@@ -3,7 +3,7 @@ import style from './Select.module.css'
 
 function Select() {
     let [value, setValue] = useState()
-    let [title, setTitle] = useState([
+    let [title] = useState([
         {title: "A"},
         {title: "B"},
         {title: "C"},

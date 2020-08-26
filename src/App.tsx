@@ -73,8 +73,8 @@ function App() {
 
 
     return (
+
         <HashRouter>
-            <div className="App">
                 <div>
                     <Navbar/>
                 </div>
@@ -94,7 +94,6 @@ function App() {
                     <Route exact path='/junior+' render={() =>
                         <JuniorPlus/>}/>
                 </div>
-            </div>
         </HashRouter>
     );
 }
