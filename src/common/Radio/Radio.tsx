@@ -24,8 +24,8 @@ function Radio() {
             {
                 value.map(v => {
                     return (
-                        <label>
-                            <input type={"radio"} key={v.id} name={v.name}  onChange={onchangeName} value={v.id} checked={checked === v.id}/>
+                        <label key={v.id} >
+                            <input type={"radio"} name={v.name}  onChange={onchangeName} value={v.id} checked={checked === v.id}/>
                             <span>{v.name}</span>
                         </label>
                     )

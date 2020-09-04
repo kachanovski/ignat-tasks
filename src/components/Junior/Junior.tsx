@@ -5,6 +5,7 @@ import EditableSpan from "../../common/EditableSpan/EditableSpan";
 import Select from "../../common/Select/Select";
 import Radio from "../../common/Radio/Radio";
 import SortArray from './SortArray';
+import Timer from "./Timer/Timer";
 
 
 function Junior() {
@@ -14,6 +15,7 @@ function Junior() {
             <div className={style.column}>
                 1
                 <EditableSpan/>
+                <Timer />
             </div>
             <div className={style.columnEven}>
                 2

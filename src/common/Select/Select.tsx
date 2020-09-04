@@ -18,7 +18,7 @@ function Select() {
     return (
         <div>
             <select className={style.selectBox} value={value} onChange={onchangeValue}>
-                {title.map(t => <option value={t.title}>{t.title}</option>)}
+                {title.map(t => <option key={t.title} value={t.title}>{t.title}</option>)}
             </select>
         </div>
     );
