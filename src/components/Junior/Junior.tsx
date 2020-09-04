@@ -6,6 +6,7 @@ import Select from "../../common/Select/Select";
 import Radio from "../../common/Radio/Radio";
 import SortArray from './SortArray';
 import Timer from "./Timer/Timer";
+import Loading from "./Loading/Loading";
 
 
 function Junior() {
@@ -25,6 +26,8 @@ function Junior() {
                 3
                 <Select/>
                 <Radio/>
+                <Loading />
+
             </div>
             <div className={style.columnEven}>
                 4
