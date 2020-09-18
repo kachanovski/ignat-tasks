@@ -1,5 +1,6 @@
 import React from 'react';
 import style from '../PreJunior/PreJunior.module.css'
+import {RequestsAPI} from "./13-task/RequestsAPI";
 
 function JuniorPlus() {
 
@@ -7,7 +8,7 @@ function JuniorPlus() {
         <div >
             <div className={style.preJuniorPage}>
                 <div className={style.column}>
-                    1
+                    <RequestsAPI />
                 </div>
                 <div className={style.columnEven}>
                     2

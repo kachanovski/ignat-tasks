@@ -13,13 +13,16 @@ const Timer = () => {
         setIsActive(true);
         setList(seconds)
     }
+
     function stop() {
         setSeconds(seconds);
         setIsActive(false);
     }
+
     function tooltipShow() {
         setTooltip(true)
     }
+
     function tooltipHide() {
         setTooltip(false)
     }
